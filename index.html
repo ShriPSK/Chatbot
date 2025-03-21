@@ -1,0 +1,46 @@
+<!--
+Filename: d:\Personal\Chatbot\index.html
+Path: d:\Personal\Chatbot
+Created Date: Thursday, March 20th 2025, 10:22:07 pm
+Author: Shri Kaanth
+
+Copyright (c) 2025 Trinom Digital
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chat Widget</title>
+</head>
+<body>
+    <div id="chat-window">
+        <div class="chat-header">
+            <img src="./assets/icons/bot.svg" alt="bot" class="chat-icon">
+            <div class="chat-title">Chatbot</div>
+        </div>
+        <div class="chat-content" id="chatBody"></div>
+        <div class="type-brand-container">
+            <div class="type-msg">
+                <input type="text" class="chat-input" id="messageInput" placeholder="Enter your queries here..." autofocus/>
+                <button class="send-button-wrapper" id="sendButton">
+                    <img src="./assets/icons/send-icon.png" class="send-button">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+        const config = {
+            message: "Hello! How can I assist you today?",
+            messageTimer: 2000,
+            thumbnail: "/assets/thumbnail.png",
+            assistantId: "your-assistant-id"
+        };
+        initializeChat(config);
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+/*
+ * Filename: d:\Personal\Chatbot\style.css
+ * Path: d:\Personal\Chatbot
+ * Created Date: Thursday, March 20th 2025, 10:42:51 pm
+ * Author: Shri Kaanth
+ * 
+ * Copyright (c) 2025 Trinom Digital
+ */
+* {
+    box-sizing: border-box; 
+}
+
+* ::-webkit-scrollbar {
+    width: 8px;
+}
+
+* ::-webkit-scrollbar-thumb {
+	background: linear-gradient(to bottom, #f8ca15, #f24544);
+    border-radius: 10px;
+}
+
+
+:root {
+	@font-face {
+		font-family: "Poppins", sans-serif;
+		src: url(".assets/fonts/Poppins-Regular.ttf") format("truetype");
+	}
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(to right, #174eb3, #b86bdd);
+}
+
+#chat-window {
+	color: black;
+	width: 60%;
+	height: 85%;
+	display: flex;
+	flex-direction: column;
+}
+.chat-header {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 16px;
+	background: #b86bdd;
+	color: white;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+}
+.chat-icon {
+	width: 25px;
+	height: 25px;
+}
+.chat-title {
+	font-size: 20px;
+}
+.chat-content {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	overflow-y: auto;
+	padding: 10px;
+	background: #fefefe;
+}
+.user-message {
+	background-color: #d1e7dd;
+	color: black;
+	align-self: flex-end;
+	border-top-right-radius: 0;
+}
+
+.type-msg {
+	display: flex;
+	justify-content: space-between;
+	border-bottom-left-radius: 16px;
+	border-bottom-right-radius: 16px;
+	background: #fefefe;
+}
+.chat-input {
+	all: unset;
+	padding: 16px;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	border-radius: 16px;
+}
+.send-button-wrapper {
+	all: unset;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.send-button {
+	width: 20px;
+    height: 20px;
+	cursor: pointer;
+}
+.message {
+	display: flex;
+	max-width: 70%;
+	padding: 10px 15px;
+	margin-bottom: 10px;
+	border-radius: 20px;
+	font-size: 16px;
+	line-height: 1.4;
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+.bot-message {
+	background-color: #ededed;
+	color: black;
+	align-self: flex-start;
+	border-top-left-radius: 0;
+}
+.user-message {
+	align-self: flex-end;
+	border-top-right-radius: 0;
+	background: #b86bdd;
+	color: white;
+}
+.loader {
+	display: flex;
+}
+.typing-loader {
+	display: flex;
+	gap: 8px;
+}
+.dot {
+	font-weight: 600;
+	animation: typing 1.4s infinite ease-in-out;
+}
+.dot:nth-child(2) {
+	animation-delay: 0.2s;
+}
+.dot:nth-child(3) {
+	animation-delay: 0.4s;
+}
+@keyframes typing {
+	0%,
+	60%,
+	100% {
+		transform: translateY(0);
+	}
+	30% {
+		transform: translateY(-10px);
+	}
+}
